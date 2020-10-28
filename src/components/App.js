@@ -16,11 +16,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.list.map((city, index) => (
-          <ol key={`location${index + 1}`}>
+        <ol>
+          {this.list.map((city, index) => (
             <li>{city}</li>
-          </ol>
-        ))}
+          ))}
+        </ol>
       </div>
     );
   }
