@@ -2,7 +2,8 @@ import React, { Component, useState } from "react";
 import "../styles/App.css";
 
 class App extends Component {
-  render() {
+  constructor(props) {
+    super(props);
     this.list = [
       "Goa",
       "Darjeeling",
@@ -11,10 +12,11 @@ class App extends Component {
       "New York",
       "Tokyo"
     ];
-
+  }
+  render() {
     return (
       <div>
-        {this.list.map((city, index) => (
+        {this.state.list.map((city, index) => (
           <ol key={`location${index + 1}`}>
             <li>{city}</li>
           </ol>
