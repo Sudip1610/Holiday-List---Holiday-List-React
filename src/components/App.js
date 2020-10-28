@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.list.map((city, index) => (
+        {this.list.map((city, index) => (
           <ol key={`location${index + 1}`}>
             <li>{city}</li>
           </ol>
