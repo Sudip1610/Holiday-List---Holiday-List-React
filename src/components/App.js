@@ -2,23 +2,13 @@ import React, { Component, useState } from "react";
 import "../styles/App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.list = [
-      "Goa",
-      "Darjeeling",
-      "Lonavala",
-      "Amsterdam",
-      "New York",
-      "Tokyo"
-    ];
-  }
   render() {
+    let list = ["Goa", "Darjeeling", "Lonavala"];
     return (
       <div>
         <ol>
-          {this.list.map((city, index) => (
-            <li>{city}</li>
+          {list.map((city, index) => (
+            <li key={"location" + index + 1}>{city}</li>
           ))}
         </ol>
       </div>
